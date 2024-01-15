@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.motivations {
+  display: flex;
+  flex-grow: 1;
+  
+  &-wrapper {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    padding: 10px;
+    gap: 16px;
+    
+    .motivation {
+      font-size: calc(var(--base-font-size) * 1.5);
+      font-weight: 500;
+      inline-size: fit-content;
+    }
+  }
+}
+
+.cta {
+  &-container {
+    display: flex;
+    background-color: var(--base-accent-color);
+    font-size: calc(var(--base-font-size) * 1.5);
+    font-weight: 700;
+    flex-grow: 2;
+  }
+
+  margin: auto;
+}

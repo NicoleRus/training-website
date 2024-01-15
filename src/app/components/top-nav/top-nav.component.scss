@@ -1,9 +1,8 @@
 .nav-container {
-  align-items: center;
-  box-shadow: 0 8px 6px -6px black;
+  align-items: stretch;
   display: flex;
   justify-content: space-between;
-  padding-inline: 20px;
+  padding: 10px 20px;
 }
 
 .nav-brand {
@@ -18,14 +17,43 @@
 
 .nav-tabs {
   display: flex;
-  gap: 32px;
+  gap: 24px;
+  margin: 0;
+  list-style-type: none;
+  padding: 0 20px;
 }
 
 .nav-tab-item {
+  display: flex;
   list-style: none;
+  
+  &:has(.nav-tab-action:hover) {
+    background-color: rgb(var(--base-accent-color-nums) / 80%);
+    border-radius: 6px;
+  }
+
+  &:has(.nav-tab-action:active) {
+    background-color: var(--base-accent-color);
+    border-radius: 6px;
+
+    .nav-tab-action {
+      color: black;
+    }
+  }
+
+  &:has(.nav-tab-action[aria-current]) {
+    border-block-end: 2px solid var(--base-accent-color);
+
+    .nav-tab-action {
+      color: black;
+      padding-bottom: 6px;
+    }
+  }
 }
 
 .nav-tab-action {
+  align-self: center;
   font-weight: 500;
   text-decoration: none;
+  padding: 8px;
 }

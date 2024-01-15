@@ -5,7 +5,7 @@ import { Component, Host, HostBinding, Input } from '@angular/core';
   standalone: true,
   templateUrl: '../../../assets/logo.svg',
   styles: [
-    `:host {display: block}`
+    `:host {display: flex}`
   ]
 })
 export class LogoComponent {

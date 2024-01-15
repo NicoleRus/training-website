@@ -5,13 +5,11 @@
       <div>{{ gym_name }}</div>
     </a>
   </div>
-  <div>
-    <ul class="nav-tabs">
-      @for (item of links; track item.id) {
-        <li class="nav-tab-item">
-          <a [routerLink]="item.path" ariaCurrentWhenActive="page" class="nav-tab-action">{{ item.label }}</a>
-        </li>
-      }
-    </ul>
-  </div>
+  <ul class="nav-tabs">
+    @for (item of links; track item.id) {
+      <li class="nav-tab-item">
+        <a [routerLink]="item.path" ariaCurrentWhenActive="page" class="nav-tab-action">{{ item.label }}</a>
+      </li>
+    }
+  </ul>
 </header>

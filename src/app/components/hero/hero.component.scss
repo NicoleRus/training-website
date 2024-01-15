@@ -1,0 +1,8 @@
+.hero {
+  &-img {
+    max-block-size: 500px;
+    inline-size: 100%;
+    object-fit: cover;
+    object-position: top -100px right 50%;
+  }
+}
