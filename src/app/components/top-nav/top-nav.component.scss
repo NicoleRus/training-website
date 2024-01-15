@@ -13,10 +13,51 @@
   font-weight: 700;
   gap: 16px;
   text-decoration: none;
+
+  &-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+ /* If the container is larger than 700px */
+  @container (min-width: 700px) {
+    .nav-logo, .nav-tabs {
+      display: flex;
+    }
+  }
+}
+
+.nav-hamburger-menu {
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 4px;
+
+  svg {
+    fill: var(--brand-font-color);
+    block-size: 48px;
+    inline-size: 48px;
+  }
+}
+
+.nav-hamburger-dropdown {
+  display: flex;
+
+  .nav-tabs-vertical {
+    flex-grow: 1;
+  }
+
+  .nav-hamburger-menu {
+    margin-block-end: auto;
+  }
+}
+
+.nav-logo {
+  display: none;
 }
 
 .nav-tabs {
-  display: flex;
+  display: none;
   gap: 24px;
   margin: 0;
   list-style-type: none;

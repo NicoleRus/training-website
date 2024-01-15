@@ -1,9 +1,28 @@
 <header class="nav-container">
-  <div>
-    <a href="." class="nav-brand">
-      <app-logo></app-logo>
-      <div>{{ gym_name }}</div>
-    </a>
+  <div class="col">
+    <div class="nav-brand-container">
+      <button class="nav-hamburger-menu" (click)="menu_open = !menu_open" [attr.aria-label]="menu_open ? 'close menu' : 'open menu'">
+        <img src="assets/icons/menu.svg" />
+      </button>
+      <a href="." class="nav-brand">
+        <app-logo class="nav-logo"></app-logo>
+        <div>{{ gym_name }}</div>
+      </a>
+    </div>
+    @if (menu_open) {
+      <div class="nav-hamburger-dropdown">
+        <ul class="nav-tabs-vertical">
+          @for (item of links; track item.id) {
+            <li class="nav-tab-item">
+              <a [routerLink]="item.path" ariaCurrentWhenActive="page" class="nav-tab-action">{{ item.label }}</a>
+            </li>
+          }
+        </ul>
+        <button class="nav-hamburger-menu" (click)="menu_open = false" aria-label="close menu">
+          <img src="assets/icons/close.svg" />
+        </button>
+      </div>
+    }
   </div>
   <ul class="nav-tabs">
     @for (item of links; track item.id) {

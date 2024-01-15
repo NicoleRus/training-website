@@ -1,4 +1,4 @@
-:root {
-  block-size: 100%;
-  inline-size: 100vw;
+.app {
+  display: grid;
+  container-type: inline-size;
 }

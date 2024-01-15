@@ -1,8 +1,3 @@
-:root {
-  /** reset **/
-  /* Box sizing rules */
-  box-sizing: border-box;
-
 /* Remove default margin */
 body,
 h1,
@@ -33,6 +28,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+html, body {
+  width: 100%;
 }
 
 /* A elements that don't have a class get default styles */
@@ -71,6 +70,11 @@ select {
   }
 }
 
+:root {
+  /** reset **/
+  /* Box sizing rules */
+  box-sizing: border-box;
+
   --base-font-size: 16px;
   --base-font-color: #2E2E2E;
   --base-accent-color-nums: 243 113 19;
@@ -79,5 +83,11 @@ select {
   h1, h2, h3, h4, h5, h6, p, span, a, div {
     color: var(--base-font-color);
     font-family: system-ui;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }
