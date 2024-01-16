@@ -12,9 +12,9 @@
     @if (menu_open) {
       <div class="nav-hamburger-dropdown">
         <ul class="nav-tabs-vertical">
-          @for (item of links; track item.id) {
+          @for(item of links; track item.id) {
             <li class="nav-tab-item">
-              <a [routerLink]="item.path" ariaCurrentWhenActive="page" class="nav-tab-action">{{ item.label }}</a>
+              <a class="nav-tab-action" [routerLink]="item.path" routerLinkActive ariaCurrentWhenActive="page">{{ item.label }}</a>
             </li>
           }
         </ul>
@@ -25,9 +25,9 @@
     }
   </div>
   <ul class="nav-tabs">
-    @for (item of links; track item.id) {
+    @for(item of links; track item.id) {
       <li class="nav-tab-item">
-        <a [routerLink]="item.path" ariaCurrentWhenActive="page" class="nav-tab-action">{{ item.label }}</a>
+        <a class="nav-tab-action" [routerLink]="item.path" routerLinkActive ariaCurrentWhenActive="page">{{ item.label }}</a>
       </li>
     }
   </ul>
