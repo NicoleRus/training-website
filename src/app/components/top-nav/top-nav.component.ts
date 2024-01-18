@@ -12,15 +12,8 @@ import { AppService } from '../../services/app/app.service';
   styleUrl: './top-nav.component.scss'
 })
 export class TopNavComponent {
-  constructor(private appService: AppService, private route: ActivatedRoute) {}
+  constructor(public appService: AppService, private route: ActivatedRoute) {}
   gym_name = this.appService.gym_name;
-  menu_open: boolean = false;
-
-
-  ngOnInit() {
-    console.log(this.route); // ActivatedRout
-    console.log(this.route.url); // UrlSegment[]
-  }
 
   links: {label: string, id: number, path: string}[] = [
     {label: "Classes", id: 1, path: 'classes'},
@@ -29,7 +22,7 @@ export class TopNavComponent {
     {label: "Account", id: 4, path: 'account'}
   ]
 
-  onRouterLinkActive(event: boolean) {
-    console.log(event);
+  toggleMenu() {
+    this.appService.updateScreenSize(!this.appService.mobileScreen());
   }
 }

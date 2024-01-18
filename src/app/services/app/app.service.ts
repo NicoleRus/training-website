@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
+  mobileScreen = signal(false);
   gym_name: string = "H-Town Fitness";
 
   classes: {}[] = [
@@ -37,4 +38,8 @@ export class AppService {
   ]
 
   constructor() { }
+
+  updateScreenSize(isMobile: boolean) {
+    this.mobileScreen.set(isMobile);
+  }
 }
