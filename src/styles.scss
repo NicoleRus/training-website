@@ -73,9 +73,12 @@ select {
 :root {
   /** reset **/
   /* Box sizing rules */
-  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
 
   --base-font-size: 16px;
+  --base-color-nums: 46 46 46;
   --base-font-color: #2E2E2E;
   --base-accent-color-nums: 243 113 19;
   --base-accent-color: rgb(var(--base-accent-color-nums));

@@ -36,6 +36,8 @@
 .nav-hamburger-menu {
   border-radius: 50%;
   background-color: transparent;
+  display: flex;
+  flex-shrink: 0;
   padding: 4px;
 
   svg {
@@ -49,7 +51,14 @@
   display: flex;
 
   .nav-tabs-vertical {
-    flex-grow: 1;
+    padding-inline-start: 10px;
+    &, .nav-tab-action {
+      flex-grow: 1;
+    }
+
+    .nav-tab-item {
+      padding-block-end: 4px;
+    }
   }
 
   .nav-hamburger-menu {

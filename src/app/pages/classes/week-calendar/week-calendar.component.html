@@ -1,0 +1,23 @@
+<table class="schedule-table">
+  <thead>
+    <tr>
+      <!-- First row = class times -->
+      <th class="shadow-inline-end"></th>
+      @for(time of times; track $index) {
+        <th class="class-time">{{ time }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for(day of schedule; track $index) {
+      <tr>
+        <td class="weekday">{{ day.day }}</td>
+        @for(time of times; let idx = $index; track idx) {
+          @if (day.schedule[time]) {
+            <td class="class-cell">{{ day.schedule[time].name }}</td>
+          } @else { <td class="class-cell"></td>}
+        }
+      </tr>
+    }
+  </tbody>
+</table>

@@ -1,4 +1,13 @@
 :host {
   display: grid;
   container-type: inline-size;
+
+  main {
+    min-width: 100%;
+    width: 100%;
+
+    &.main-padding {
+      padding: 20px;
+    }
+  }
 }

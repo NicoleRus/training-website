@@ -1,2 +1,4 @@
 <app-top-nav></app-top-nav>
-<router-outlet></router-outlet>
+<main [ngClass]="isHome ? '' : 'main-padding'">
+  <router-outlet></router-outlet>
+</main>
