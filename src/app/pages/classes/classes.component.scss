@@ -1,0 +1,14 @@
+:host {
+  .class-type {
+    margin-block: 30px;
+
+    .class-name {
+      font-size: calc(var(--base-font-size) * 1.25);
+      font-weight: bold;
+    }
+
+    .class-description {
+      margin-block-start: 0;
+    }
+  }
+}

@@ -3,22 +3,27 @@
   display: flex;
 
   .schedule-table {
+    background-color: white;
     border-collapse: collapse;
+    border-inline-start: 1px solid var(--base-font-color);
     color: var(--base-font-color);
     display: block;
     font-size: calc(var(--base-font-size) * 1.5);
     margin: auto;
     overflow-x: auto;
-    padding-block-start: 20px;
 
-    td, th {
+    td,
+    th {
       border: 1px solid var(--base-font-color);
     }
 
     thead th:first-child {
       background-color: white;
       border-inline-start: none;
-      box-shadow: inset 3px 0px 0px 0px var(--base-font-color), inset -3px 0px 0px 0px var(--base-font-color), inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
+      box-shadow:
+        inset 3px 0px 0px 0px var(--base-font-color),
+        inset -3px 0px 0px 0px var(--base-font-color),
+        inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
       position: sticky;
       left: 0;
     }
@@ -29,7 +34,10 @@
 
     .weekday {
       background-color: white;
-      box-shadow: inset 3px 0px 0px 0px var(--base-font-color), inset -3px 0px 0px 0px var(--base-font-color), inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
+      box-shadow:
+        inset 3px 0px 0px 0px var(--base-font-color),
+        inset -3px 0px 0px 0px var(--base-font-color),
+        inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
       border-inline-start: none;
       font-weight: bold;
       left: 0;
@@ -37,17 +45,24 @@
       text-align: center;
     }
 
-      tr:first-of-type {
-        th:first-of-type {
-          box-shadow: inset 0 3px 0 0 var(--base-font-color), inset 3px 0px 0px 0px var(--base-font-color), inset -3px 0px 0px 0px var(--base-font-color), inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
-        }
-
-      } 
-      
-      tr:last-of-type {
-        .weekday {
-          box-shadow: inset 0 -3px 0 0 var(--base-font-color), inset 3px 0px 0px 0px var(--base-font-color), inset -3px 0px 0px 0px var(--base-font-color), inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
-        }
+    tr:first-of-type {
+      th:first-of-type {
+        box-shadow:
+          inset 0 3px 0 0 var(--base-font-color),
+          inset 3px 0px 0px 0px var(--base-font-color),
+          inset -3px 0px 0px 0px var(--base-font-color),
+          inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
       }
+    }
+
+    tr:last-of-type {
+      .weekday {
+        box-shadow:
+          inset 0 -3px 0 0 var(--base-font-color),
+          inset 3px 0px 0px 0px var(--base-font-color),
+          inset -3px 0px 0px 0px var(--base-font-color),
+          inset 0 0 0 60px rgb(var(--base-accent-color-nums) / 40%);
+      }
+    }
   }
 }

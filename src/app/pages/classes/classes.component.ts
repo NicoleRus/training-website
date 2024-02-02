@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WeekCalendarComponent } from './week-calendar/week-calendar.component';
 import { AppService } from '../../services/app/app.service';
 
@@ -10,7 +10,14 @@ import { AppService } from '../../services/app/app.service';
   styleUrl: './classes.component.scss'
 })
 export class ClassesComponent {
-  constructor(private appService: AppService) {}
+  classIDs: string[] = [];
+
+  constructor(private appService: AppService) {
+    // this.appService.classes.forEach((class) => {
+      
+    // })
+  }
 
   classes = this.appService.classes;
+
 }

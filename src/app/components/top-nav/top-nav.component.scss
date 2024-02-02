@@ -1,15 +1,17 @@
 .nav-container {
   align-items: stretch;
+  border-block-end: 2px solid rgb(var(--base-color-nums) / 80%);
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding-inline: 20px;
 
   /* If the container is larger than 700px */
   @container (min-width: 700px) {
-    .nav-logo, .nav-tabs {
+    .nav-logo,
+    .nav-tabs {
       display: flex;
     }
-    
+
     .nav-hamburger-menu {
       display: none;
     }
@@ -23,13 +25,13 @@
   font-size: calc(var(--base-font-size) * 2);
   font-weight: 700;
   gap: 16px;
+  padding-block: 10px;
   text-decoration: none;
 
   &-container {
     display: flex;
     gap: 16px;
     align-items: center;
-  
   }
 }
 
@@ -52,7 +54,8 @@
 
   .nav-tabs-vertical {
     padding-inline-start: 10px;
-    &, .nav-tab-action {
+    &,
+    .nav-tab-action {
       flex-grow: 1;
     }
 
@@ -83,7 +86,7 @@
   list-style: none;
 
   &:has(.nav-tab-action[aria-current]) {
-    border-block-end: 2px solid var(--base-accent-color);
+    border-block-end: 3px solid var(--base-accent-color);
   }
 }
 
@@ -104,7 +107,8 @@
     }
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: rgb(var(--base-accent-color-nums) / 80%);
     border-radius: 6px;
   }
@@ -112,5 +116,4 @@
   &:active {
     color: black;
   }
-
 }

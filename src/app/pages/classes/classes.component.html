@@ -1,1 +1,8 @@
 <app-week-calendar></app-week-calendar>
+
+@for(classType of classes; track $index) {
+  <div class="class-type">
+    <span class="class-name">{{ classType.name }}</span>
+    <p class="class-description">{{ classType.description }}</p>
+  </div>
+}
