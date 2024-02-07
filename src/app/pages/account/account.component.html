@@ -1,0 +1,9 @@
+@if (loggedIn && user) {
+
+} @else {
+  @if (formType === 'login') {
+    <app-login-form></app-login-form>
+  } @else {
+    <app-signup-form></app-signup-form>
+  }
+}

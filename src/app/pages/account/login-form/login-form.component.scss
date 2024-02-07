@@ -1,0 +1,55 @@
+:host {
+  --form-gap: 4px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--form-gap) * 4); // between inputs and submit button
+    margin-block-start: calc(var(--form-gap) * 5); // between "divider" and form
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      inline-size: 50%;
+      align-items: center;
+      margin: auto;
+      padding: calc(var(--form-gap) * 10); // 40 px on all sides
+      border: 2px solid var(--charcoal-hex);
+      border-radius: 6px;
+    }
+
+    &-header {
+      border-block-end: 2px solid var(--charcoal-hex);
+      justify-content: center;
+      display: flex;
+      inline-size: 100%;
+    }
+
+    &-title {
+      margin-block-end: calc(
+        var(--form-gap) * 5
+      ); // between title and "divider"
+      margin-block-start: 0;
+    }
+
+    .input-container {
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .checkbox-container {
+        display: flex;
+        gap: 6px;
+        font-weight: normal;
+        align-items: center;
+
+        input[type='checkbox'] {
+          border-radius: 4px;
+          outline-offset: 1px;
+          block-size: fit-content;
+        }
+      }
+    }
+  }
+}

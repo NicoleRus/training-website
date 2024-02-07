@@ -85,9 +85,9 @@ select {
   --charcoal-hex: #2E2E2E;
   --orange-rgb-nums: 243 113 19;
   --orange-rgb: rgb(var(--orange-rgb-nums));
-  --accent-blue-rgb-nums: 0, 51, 102;
+  --accent-blue-rgb-nums: 0 51 102;
   --accent-blue-hex: #003366;
-  --accent-green-rgb-nums: 85, 107, 47;
+  --accent-green-rgb-nums: 85 107 47;
   --accent-green-hex: #556b2f;
 
   h1, h2, h3, h4, h5, h6, p, span, a, div {
@@ -99,5 +99,34 @@ select {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+  }
+
+  *:focus-visible {
+    outline: 1px dashed var(--charcoal-hex);
+    outline-offset: 2px;
+  }
+
+  .brand-button,
+  .brand-checkbox {
+    background-color: white;
+    border: 2px solid var(--accent-green-hex);
+    color: var(--accent-green-hex);
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: rgb(var(--accent-green-rgb-nums) / 20%);
+    }
+
+    &:focus-visible {
+      background-color: rgb(var(--accent-green-rgb-nums) / 20%);
+    }
+
+    &:active {
+      background-color: rgb(var(--accent-green-rgb-nums) / 80%);
+      color: white;
+    }
+
   }
 }

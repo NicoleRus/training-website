@@ -1,4 +1,5 @@
 import { EmailValidator } from "@angular/forms"
+import { Url } from "url"
 
 export type User = {
   basic: {
@@ -6,7 +7,8 @@ export type User = {
     last_name: string,
     email: string, // double as username?
     password: string, // encrypted
-    newsletter_subscription: boolean
+    newsletter_subscription: boolean,
+    img_url: Url
   }
   contact: {
     phone: number,
