@@ -77,14 +77,21 @@ select {
     box-sizing: border-box;
   }
 
+  // sizes
   --base-font-size: 16px;
-  --base-color-nums: 46 46 46;
-  --base-font-color: #2E2E2E;
-  --base-accent-color-nums: 243 113 19;
-  --base-accent-color: rgb(var(--base-accent-color-nums));
+
+  // colors
+  --charcoal-rgb-nums: 46 46 46;
+  --charcoal-hex: #2E2E2E;
+  --orange-rgb-nums: 243 113 19;
+  --orange-rgb: rgb(var(--orange-rgb-nums));
+  --accent-blue-rgb-nums: 0, 51, 102;
+  --accent-blue-hex: #003366;
+  --accent-green-rgb-nums: 85, 107, 47;
+  --accent-green-hex: #556b2f;
 
   h1, h2, h3, h4, h5, h6, p, span, a, div {
-    color: var(--base-font-color);
+    color: var(--charcoal-hex);
     font-family: system-ui;
   }
 

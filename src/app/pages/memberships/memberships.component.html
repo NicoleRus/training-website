@@ -1,1 +1,5 @@
-<p>memberships works!</p>
+<div class="memberships">
+  @for(plan of memberships; track $index) {
+    <app-membership-card [name]="plan.name" [cost]="plan.price"></app-membership-card>
+  }
+</div>

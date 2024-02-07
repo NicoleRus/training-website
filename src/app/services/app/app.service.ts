@@ -26,18 +26,18 @@ export class AppService {
     }
   ]
 
-  memberships: {}[] = [
+  memberships: {name: string, price: number}[] = [
     {
       name: '2x/week',
-      price: '$100/month'
+      price: 100
     },
     {
       name: '4x/week',
-      price: '$150/month'
+      price: 150
     },
     {
       name: 'unlimited',
-      price: '$180/month'
+      price: 180
     }
   ]
 

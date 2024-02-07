@@ -1,6 +1,6 @@
 .nav-container {
   align-items: stretch;
-  border-block-end: 2px solid rgb(var(--base-color-nums) / 80%);
+  border-block-end: 2px solid rgb(var(--charcoal-rgb-nums) / 80%);
   display: flex;
   justify-content: space-between;
   padding-inline: 20px;
@@ -86,7 +86,7 @@
   list-style: none;
 
   &:has(.nav-tab-action[aria-current]) {
-    border-block-end: 3px solid var(--base-accent-color);
+    border-block-end: 3px solid var(--orange-rgb);
   }
 }
 
@@ -97,19 +97,19 @@
   padding: 8px;
 
   &[aria-current] {
-    background-color: rgb(var(--base-accent-color-nums) / 50%);
+    background-color: rgb(var(--orange-rgb-nums) / 50%);
     border-radius: 6px;
     color: black;
     padding-bottom: 6px;
 
     &:active {
-      background-color: var(--base-accent-color);
+      background-color: var(--orange-rgb);
     }
   }
 
   &:hover,
   &:active {
-    background-color: rgb(var(--base-accent-color-nums) / 80%);
+    background-color: rgb(var(--orange-rgb-nums) / 80%);
     border-radius: 6px;
   }
 
