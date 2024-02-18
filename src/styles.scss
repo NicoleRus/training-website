@@ -101,6 +101,10 @@ select {
     flex-grow: 1;
   }
 
+  *:focus {
+    outline: none;
+  }
+
   *:focus-visible {
     outline: 1px dashed var(--charcoal-hex);
     outline-offset: 2px;
