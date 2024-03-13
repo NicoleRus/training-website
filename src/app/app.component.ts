@@ -26,13 +26,11 @@ import { FirebaseUIModule } from 'firebaseui-angular';
   styleUrl: './app.component.scss',
   standalone: true,
   imports: [
-    BrowserModule,
     FormsModule,
     CommonModule,
     AngularFireAuthModule,
     RouterOutlet,
     TopNavComponent,
-    FirebaseUIModule
   ],
   providers: [
     {provide: USE_AUTH_EMULATOR, useValue: !environment.production ? ['localhost', 9099] : undefined},
