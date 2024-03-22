@@ -1,13 +1,4 @@
 <app-top-nav></app-top-nav>
 <main [ngClass]="isHome ? '' : 'main-padding'">
   <router-outlet></router-outlet>
-  
-  <div *ngIf="firebaseUIReady">
-    <firebase-ui></firebase-ui>
-  </div>
-  
-  <div *ngIf="!firebaseUIReady">
-    <!-- Placeholder or loading indicator while waiting for FirebaseUIModule to load -->
-    Loading...
-  </div>
 </main>

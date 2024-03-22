@@ -1,26 +1,13 @@
-import { APP_INITIALIZER, ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { ExtraOptions, provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
-import { FIREBASE_INITIALIZATION, FirebaseInitializationService } from './data/firebase/firebase-init';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes, withHashLocation()),
     provideClientHydration(),
-    FirebaseInitializationService,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (firebaseInitializationService: FirebaseInitializationService) => () => firebaseInitializationService.loadFirebaseAndFirebaseUI(),
-      multi: true,
-      deps: [FirebaseInitializationService]
-    },
-    {
-      provide: FIREBASE_INITIALIZATION,
-      useFactory: (firebaseInitializationService: FirebaseInitializationService) => firebaseInitializationService.loadFirebaseAndFirebaseUI(),
-      deps: [FirebaseInitializationService]
-    }
   ]
 };
 
