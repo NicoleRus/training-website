@@ -14,7 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 })
 export class AccountComponent {
   constructor(private userService: UserService) {}
-  formType: 'login' | 'signup' = 'login';
+  formType: 'login' | 'signup' = 'signup';
 
   user = this.userService.user;
   loggedIn = this.userService.loggedIn;

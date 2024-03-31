@@ -3,26 +3,30 @@
   <div class="form-header">
     <h2 class="form-title">Sign up</h2>
   </div>
-  <form class="form">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
       <label for="first_name">First name</label>
-      <input type="text" id="first_name" />
+      <input type="text" id="first_name" formControlName="first_name" />
     </div>
     <div class="input-container">
       <label for="last_name">Last name</label>
-      <input type="text" id="last_name" />
+      <input type="text" id="last_name" formControlName="last_name"/>
     </div>
     <div class="input-container">
       <label for="email">Email address</label>
-      <input type="text" id="email" />
+      <input type="text" id="email" formControlName="email"/>
+    </div>
+    <div class="input-container">
+      <label for="email">Password</label>
+      <input type="password" id="password" formControlName="password"/>
     </div>
     <div class="input-container">
       <div class="checkbox-container">
-        <input type="checkbox" id="newsletter-checkbox" name="checkbox" class="brand-checkbox">
+        <input type="checkbox" id="newsletter-checkbox" name="checkbox" class="brand-checkbox" formControlName="subscribe">
         <label for="newsletter-checkbox">Subscribe to newsletter</label>
       </div>
     </div>
     <button type="submit" class="brand-button">Log in</button>
-
+    <!-- check for registerForm.controls['email/etc'].invalid && .touched || .dirty => error message-->
   </form>
 </div>

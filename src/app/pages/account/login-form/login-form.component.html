@@ -2,19 +2,20 @@
   <div class="form-header">
     <h2 class="form-title">Log in</h2>
   </div>
-  <form class="form" #form="ngForm">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
       <label for="username">Username</label>
-      <input type="text" id="username" />
+      <input type="text" id="username" formControlName="username"/>
     </div>
     <div class="input-container">
       <label for="password">Password</label>
-      <input [type]="passwordChecked.value ? 'text' : 'password'" id="password" />
+      <input [type]="passwordChecked.value ? 'text' : 'password'" id="password" formControlName="password"/>
       <div class=checkbox-container>
-        <input type="checkbox" id="password-checkbox" name="checkbox" class="brand-checkbox" [(ngModel)]="checkboxVal" #passwordChecked="ngModel">
+        <input type="checkbox" id="password-checkbox" name="checkbox" class="brand-checkbox" #passwordChecked>
         <label for="password-checkbox">Show password</label>
       </div>
     </div>
     <button type="submit" class="brand-button">Log in</button>
   </form>
+  <p>Not a member? <a routerLink="signup">Create an account.</a></p>
 </div>
