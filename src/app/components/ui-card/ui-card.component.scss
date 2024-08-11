@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  min-inline-size: 200px;
+  inline-size: 30%;
+  flex-grow: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  gap: 8px;
+  border: 2px solid var(--charcoal-hex);
+  border-radius: 6px;
+  padding: 10px;
+
+  .heading {
+    background-color: rgb(var(--orange-rgb-nums) / 40%);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    &-title {
+      font-size: calc(var(--base-font-size) * 1.25);
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  &.secondary {
+    border-color: var(--accent-green-hex);
+
+    .heading {
+      background-color: rgb(var(--accent-green-rgb-nums) / 40%);
+    }
+  }
+}
+

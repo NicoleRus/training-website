@@ -5,7 +5,7 @@ import { Injectable, signal } from '@angular/core';
 })
 export class AppService {
   mobileScreen = signal(false);
-  gym_name: string = "H-Town Fitness";
+  gym_name: string = "AR Fitness";
 
   classes: {name: string, description: string}[] = [
     {
@@ -28,16 +28,16 @@ export class AppService {
 
   memberships: {name: string, price: number}[] = [
     {
-      name: '2x/week',
-      price: 100
+      name: 'drop-in',
+      price: 25
     },
     {
-      name: '4x/week',
-      price: 150
+      name: '3x/week',
+      price: 175
     },
     {
       name: 'unlimited',
-      price: 180
+      price: 200
     }
   ]
 

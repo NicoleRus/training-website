@@ -1,0 +1,4 @@
+<div class="card" [ngClass]="accentCard() ? 'secondary' : ''">
+  <div class="heading"><span class="heading-title">{{ title() }}</span></div>
+  <div class="content"><ng-content></ng-content></div>
+</div>
