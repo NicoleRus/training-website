@@ -4,16 +4,17 @@
 }
 
 .motivations {
+  border-block: 2px solid black;
   display: flex;
   flex-grow: 1;
-  
+
   &-wrapper {
     display: flex;
     margin: auto;
     flex-direction: column;
     padding: 30px;
     gap: 16px;
-    
+
     .motivation {
       font-size: calc(var(--base-font-size) * 1.5);
       font-weight: 500;

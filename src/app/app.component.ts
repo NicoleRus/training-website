@@ -1,5 +1,4 @@
 import {
-  CUSTOM_ELEMENTS_SCHEMA,
   Component,
   ElementRef,
   OnInit,

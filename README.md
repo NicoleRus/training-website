@@ -1,3 +1,7 @@
+08/12/2024
+Archiving project and moving to new stack (possibly Next.js or Vue) for better support and integration with Supabase and Stripe.
+Also redesigning look+feel of website based on feedback.
+
 # Website
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.

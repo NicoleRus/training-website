@@ -89,7 +89,7 @@ select {
   // colors
   --charcoal-rgb-nums: 46 46 46;
   --charcoal-hex: #2e2e2e;
-  --orange-rgb-nums: 243 113 19;
+  --orange-rgb-nums: 246, 43, 43;
   --orange-rgb: rgb(var(--orange-rgb-nums));
   --accent-blue-rgb-nums: 0 51 102;
   --accent-blue-hex: #003366;
@@ -114,6 +114,19 @@ select {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 24px;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 40px;
+
+    .brand-button {
+      inline-size: fit-content;
+      margin-inline: auto;
+    }
   }
 
   *:focus {

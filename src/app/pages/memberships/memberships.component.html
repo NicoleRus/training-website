@@ -1,5 +1,7 @@
-<div class="memberships">
+<div class="flex-container">
   @for(plan of memberships; track $index) {
-    <app-membership-card [name]="plan.name" [cost]="plan.price"></app-membership-card>
+    <app-ui-card [title]="plan.name">
+      <div class="membership-cost">{{ plan.price }} / month</div>
+    </app-ui-card>
   }
 </div>
